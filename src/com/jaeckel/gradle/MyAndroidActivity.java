@@ -27,6 +27,9 @@ public class MyAndroidActivity extends Activity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate");
         setContentView(R.layout.main);
+        
+        Interface instance = new Implementation();
+        
     }
     
     public static void publicStaticVoidMethod() {
@@ -34,9 +37,9 @@ public class MyAndroidActivity extends Activity {
     }
     
     private static void privateStaticVoidMethod() {
-
-      String useThis = "Foooooo";
-      Util.utilMethodWithOneParametr(useThis);
+        
+        String useThis = "Foooooo";
+        Util.utilMethodWithOneParametr(useThis);
     }
     
     private void privateVoidMethodWithOneParameter(String parameter) {
@@ -48,7 +51,7 @@ public class MyAndroidActivity extends Activity {
         String localString1 = parameter;
         Log.d(TAG, "localString1: " + localString1);
         Log.d(TAG, "   parameter: " + parameter);
-
+        
         String localString2 = parameter2;
         
         Log.d(TAG, "localString2: " + localString2);

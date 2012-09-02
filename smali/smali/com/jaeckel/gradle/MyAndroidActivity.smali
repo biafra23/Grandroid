@@ -55,7 +55,7 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 70
     sget-object v0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPublicStaticString:Ljava/lang/String;
 
     return-object v0
@@ -65,14 +65,14 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 41
     const-string v0, "Foooooo"
 
-    .line 39
+    .line 42
     .local v0, useThis:Ljava/lang/String;
     invoke-static {v0}, Lcom/jaeckel/gradle/Util;->utilMethodWithOneParametr(Ljava/lang/String;)V
 
-    .line 40
+    .line 43
     return-void
 .end method
 
@@ -81,7 +81,7 @@
     .parameter "parameter"
 
     .prologue
-    .line 44
+    .line 47
     return-void
 .end method
 
@@ -91,10 +91,10 @@
     .parameter "parameter2"
 
     .prologue
-    .line 48
+    .line 51
     move-object v0, p1
 
-    .line 49
+    .line 52
     .local v0, localString1:Ljava/lang/String;
     const-string v2, "SMALI"
 
@@ -118,7 +118,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
+    .line 53
     const-string v2, "SMALI"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -141,10 +141,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
+    .line 55
     move-object v1, p2
 
-    .line 54
+    .line 57
     .local v1, localString2:Ljava/lang/String;
     const-string v2, "SMALI"
 
@@ -168,7 +168,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
+    .line 58
     const-string v2, "SMALI"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -191,7 +191,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
+    .line 59
     return-void
 .end method
 
@@ -199,10 +199,10 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 36
     invoke-static {}, Lcom/jaeckel/gradle/Util;->utilMethod()V
 
-    .line 34
+    .line 37
     return-void
 .end method
 
@@ -211,10 +211,10 @@
     .parameter "mPublicStaticString"
 
     .prologue
-    .line 71
+    .line 74
     sput-object p0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPublicStaticString:Ljava/lang/String;
 
-    .line 72
+    .line 75
     return-void
 .end method
 
@@ -224,7 +224,7 @@
     .locals 1
 
     .prologue
-    .line 75
+    .line 78
     iget-object v0, p0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPrivateString:Ljava/lang/String;
 
     return-object v0
@@ -234,14 +234,14 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 62
     iget-object v0, p0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPublicString:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 3
     .parameter "savedInstanceState"
 
     .prologue
@@ -249,18 +249,24 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 28
-    const-string v0, "SMALI"
+    const-string v1, "SMALI"
 
-    const-string v1, "onCreate"
+    const-string v2, "onCreate"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 29
-    const/high16 v0, 0x7f02
+    const/high16 v1, 0x7f02
 
-    invoke-virtual {p0, v0}, Lcom/jaeckel/gradle/MyAndroidActivity;->setContentView(I)V
+    invoke-virtual {p0, v1}, Lcom/jaeckel/gradle/MyAndroidActivity;->setContentView(I)V
 
-    .line 30
+    .line 31
+    new-instance v0, Lcom/jaeckel/gradle/Implementation;
+
+    invoke-direct {v0}, Lcom/jaeckel/gradle/Implementation;-><init>()V
+
+    .line 33
+    .local v0, instance:Lcom/jaeckel/gradle/Interface;
     return-void
 .end method
 
@@ -269,10 +275,10 @@
     .parameter "mPrivateString"
 
     .prologue
-    .line 79
+    .line 82
     iput-object p1, p0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPrivateString:Ljava/lang/String;
 
-    .line 80
+    .line 83
     return-void
 .end method
 
@@ -281,9 +287,9 @@
     .parameter "mPublicString"
 
     .prologue
-    .line 63
+    .line 66
     iput-object p1, p0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPublicString:Ljava/lang/String;
 
-    .line 64
+    .line 67
     return-void
 .end method

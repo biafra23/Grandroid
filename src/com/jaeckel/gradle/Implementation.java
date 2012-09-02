@@ -6,7 +6,7 @@ import android.util.Log;
  * @date 9/2/12 9:32 PM
  */
 public class Implementation implements Interface {
-    private static final String TAG = "SMALI";
+    private static String TAG = "SMALI";
     
     // Implicit empty constructor in Smali:
     //  .method public constructor<init>()V
