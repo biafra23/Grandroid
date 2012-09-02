@@ -30,11 +30,13 @@ public class MyAndroidActivity extends Activity {
     }
     
     public static void publicStaticVoidMethod() {
-        
+        Util.utilMethod();
     }
     
     private static void privateStaticVoidMethod() {
-        
+
+      String useThis = "Foooooo";
+      Util.utilMethodWithOneParametr(useThis);
     }
     
     private void privateVoidMethodWithOneParameter(String parameter) {

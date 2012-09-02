@@ -55,17 +55,24 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 67
     sget-object v0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPublicStaticString:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method private static privateStaticVoidMethod()V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 38
+    const-string v0, "Foooooo"
+
+    .line 39
+    .local v0, useThis:Ljava/lang/String;
+    invoke-static {v0}, Lcom/jaeckel/gradle/Util;->utilMethodWithOneParametr(Ljava/lang/String;)V
+
+    .line 40
     return-void
 .end method
 
@@ -74,7 +81,7 @@
     .parameter "parameter"
 
     .prologue
-    .line 42
+    .line 44
     return-void
 .end method
 
@@ -84,10 +91,10 @@
     .parameter "parameter2"
 
     .prologue
-    .line 46
+    .line 48
     move-object v0, p1
 
-    .line 47
+    .line 49
     .local v0, localString1:Ljava/lang/String;
     const-string v2, "SMALI"
 
@@ -111,7 +118,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
+    .line 50
     const-string v2, "SMALI"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -134,10 +141,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
+    .line 52
     move-object v1, p2
 
-    .line 52
+    .line 54
     .local v1, localString2:Ljava/lang/String;
     const-string v2, "SMALI"
 
@@ -161,7 +168,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
+    .line 55
     const-string v2, "SMALI"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -184,7 +191,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
+    .line 56
     return-void
 .end method
 
@@ -192,6 +199,9 @@
     .locals 0
 
     .prologue
+    .line 33
+    invoke-static {}, Lcom/jaeckel/gradle/Util;->utilMethod()V
+
     .line 34
     return-void
 .end method
@@ -201,10 +211,10 @@
     .parameter "mPublicStaticString"
 
     .prologue
-    .line 69
+    .line 71
     sput-object p0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPublicStaticString:Ljava/lang/String;
 
-    .line 70
+    .line 72
     return-void
 .end method
 
@@ -214,7 +224,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 75
     iget-object v0, p0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPrivateString:Ljava/lang/String;
 
     return-object v0
@@ -224,7 +234,7 @@
     .locals 1
 
     .prologue
-    .line 57
+    .line 59
     iget-object v0, p0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPublicString:Ljava/lang/String;
 
     return-object v0
@@ -259,10 +269,10 @@
     .parameter "mPrivateString"
 
     .prologue
-    .line 77
+    .line 79
     iput-object p1, p0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPrivateString:Ljava/lang/String;
 
-    .line 78
+    .line 80
     return-void
 .end method
 
@@ -271,9 +281,9 @@
     .parameter "mPublicString"
 
     .prologue
-    .line 61
+    .line 63
     iput-object p1, p0, Lcom/jaeckel/gradle/MyAndroidActivity;->mPublicString:Ljava/lang/String;
 
-    .line 62
+    .line 64
     return-void
 .end method
